@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Насников Андрей Сергеевич - ГБПОУ "БРИЭТ"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: #7f8c8d;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a i {
+            margin-right: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .breadcrumbs {
+            padding: 15px 0;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumbs span {
+            margin: 0 5px;
+        }
+
+        .employee-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .employee-header {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            background-color: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .employee-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 25px;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .employee-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .employee-info h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .employee-position {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .employee-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            margin-right: 5px;
+            color: #3498db;
+        }
+
+        .employee-body {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+        }
+
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-section h2 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        .info-label {
+            width: 160px;
+            color: #7f8c8d;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .back-link i {
+            margin-right: 8px;
+        }
+
+        .back-link:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-column ul li i {
+            margin-right: 8px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .footer-column ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-column ul li a:hover {
+            color: #3498db;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            margin-top: 20px;
+            color: #bdc3c7;
+        }
+
+        @media (max-width: 768px) {
+            .employee-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .employee-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .employee-contacts {
+                justify-content: center;
+            }
+
+            .header-container {
+                flex-direction: column;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .nav-links a {
+                margin: 5px 0;
+            }
+
+            .info-row {
+                flex-direction: column;
+            }
+
+            .info-label {
+                width: 100%;
+                margin-bottom: 3px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="Логотип техникума">
+                ГБПОУ "БРИЭТ"
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Главная</a>
+                <a href="staff.html"><i class="fas fa-users"></i> Сотрудники</a>
+                <a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a>
+                <a href="login.html"><i class="fas fa-user"></i> Войти</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="staff.html">Сотрудники</a>
+            <span>/</span>
+            <span>Насников Андрей Сергеевич</span>
+        </div>
+
+        <a href="staff.html" class="back-link"><i class="fas fa-arrow-left"></i> Назад к списку</a>
+
+        <div class="employee-card">
+            <div class="employee-header">
+                <div class="employee-photo">
+                    <img src="насников.jpg" alt="Насников Андрей Сергеевич">
+                </div>
+                <div class="employee-info">
+                    <h1>Насников Андрей Сергеевич</h1>
+                    <div class="employee-position"></div>
+                    <div class="employee-contacts">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i> +7 (993) 738-7350
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> nasnikov@mail.ru
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-door-open"></i> Кабинет: 101,107
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="employee-body">
+                <div class="info-section">
+                    <h2>Основная информация</h2>
+                    <div class="info-row">
+                        <div class="info-label">Образование:</div>
+                        <div class="info-value">Основное общее, БРИЭТ</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Стаж работы:</div>
+                        <div class="info-value">2 года </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Профессиональная деятельность</h2>
+                    <div class="info-row">
+                        <div class="info-label">Должность:</div>
+                        <div class="info-value">Системный администратор,преподаватель</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Преподаваемые дисциплины:</div>
+                        <div class="info-value">Разработчик веб и мультимедийных приложений</div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h2>Достижения</h2>
+                    <div class="info-row">
+                        <div class="info-label">Награды:</div>
+                        <div class="info-value">Отсутствуют</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> г. Улан-Удэ, ул. Павлова, 68</li>
+                    <li><i class="fas fa-phone-alt"></i> +7 (3012) 44-55-66</li>
+                    <li><i class="fas fa-envelope"></i> info@briet.ru</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Главная</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> О техникуме</a></li>
+                    <li><a href="news.html"><i class="fas fa-chevron-right"></i> Новости</a></li>
+                    <li><a href="staff.html"><i class="fas fa-chevron-right"></i> Сотрудники</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Социальные сети</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-vk"></i> ВКонтакте</a></li>
+                    <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 ГБПОУ "БРИЭТ"
+        </div>
+    </footer>
+</body>
+</html>
